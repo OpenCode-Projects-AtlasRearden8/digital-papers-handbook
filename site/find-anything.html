@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find Anything in Five Seconds (Ctrl+F Skills) — The Digital Papers Handbook</title>
+<style>:root{--ink:#1f2430;--paper:#fbf8f3;--accent:#2a6f61;--accent-soft:#e3efec;--muted:#6b7280;--line:#e5e1d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper)}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 20px;display:flex;gap:36px;align-items:flex-start}
+header.site{background:var(--accent);color:#fff;padding:14px 0}
+header.site .container{display:block}
+header.site strong{font-size:18px}
+header.site span{font-size:13px;opacity:.85;display:block}
+nav.sidebar{position:sticky;top:20px;width:210px;flex:0 0 210px;padding:18px 0;font-size:14px}
+nav.sidebar a{display:block;padding:4px 10px;border:0;border-left:2px solid var(--line);color:var(--ink)}
+nav.sidebar a:hover{background:var(--accent-soft)}
+nav.sidebar a.current{border-left-color:var(--accent);font-weight:bold;color:var(--accent)}
+main{flex:1;min-width:0;padding:28px 0 40px}
+h1,h2,h3{line-height:1.25;font-family:'Segoe UI',system-ui,sans-serif}
+h1{font-size:30px;margin:0 0 6px}
+p.jumpline{color:var(--muted);font-style:italic;margin-top:0}
+h2{font-size:22px;margin-top:34px;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin-top:24px}
+pre{background:#2b2b33;color:#f4f4f4;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.45}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+pre code{background:transparent;padding:0;color:inherit}
+blockquote{margin:18px 0;padding:10px 18px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:18px 0 30px}
+footer.site .container{display:block}
+@media(max-width:760px){.container{display:block}nav.sidebar{width:auto;position:static;padding-bottom:0}main{padding-top:10px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="container"><strong>The Digital Papers Handbook</strong><span>Taming paper and digital documents — one hour a year.</span></div></header>
+<div class="container">
+<nav class="sidebar"><a href="index.html">Home</a>
+<a href="keep-or-toss.html">Keep or Toss</a>
+<a href="retention.html">Retention Table</a>
+<a href="scanning.html">Scan With Your Phone</a>
+<a href="folders-naming.html">Folders and Naming</a>
+<a href="find-anything.html" class="current">Find Anything</a>
+<a href="ai-filing.html">AI Filing (optional)</a>
+<a href="shredding.html">Shredding Rules</a>
+<a href="yearly-cleanup.html">Yearly Cleanup</a>
+<a href="glossary.html">Glossary</a></nav>
+<main><p><em>Once you've got a folder system, the real superpower is that you basically never need to browse folders. Search does it all — but only if you know a handful of moves.</em></p>
+<hr>
+<h2 id="the-only-search-you-need-to-memorize">The only search you need to memorize</h2>
+<ul>
+<li><strong>Windows / Linux:</strong> <code>Ctrl+F</code></li>
+<li><strong>Mac:</strong> <code>⌘ + F</code></li>
+</ul>
+<p>That searches <em>inside the file you have open</em>. The other one, where you search <em>across all your files</em>, is this:</p>
+<ul>
+<li><strong>Windows:</strong> <code>Windows key</code>, then just start typing</li>
+<li><strong>Mac:</strong> <code>⌘ + Space</code> (Spotlight), then just start typing</li>
+<li><strong>Most synced drives</strong> (OneDrive, Google Drive, Dropbox on the web): search box at the top</li>
+</ul>
+<p>Between those two searches, you can reach any named file, and any phrase <em>inside</em> any file, in seconds. Everything else on this page is polish.</p>
+<h2 id="ctrlf-moves-worth-knowing">Ctrl+F moves worth knowing</h2>
+<p>When you're inside a PDF, webpage, or document:</p>
+<table>
+<thead>
+<tr>
+<th>You want...</th>
+<th>Type...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A tax form from a specific year</td>
+<td>the year, e.g. <code>2024</code></td>
+</tr>
+<tr>
+<td>Someone's name in a long PDF</td>
+<td>the name, e.g. <code>Asdale</code></td>
+</tr>
+<tr>
+<td>All mentions, not just the first</td>
+<td><code>Enter</code> again and again (or ⌘+G on Mac) to keep jumping</td>
+</tr>
+<tr>
+<td>Slightly different spellings of a word</td>
+<td>type part of the word only: <code>insur</code> finds insurance, insured, insurer</td>
+</tr>
+<tr>
+<td>A phrase, exactly</td>
+<td>the phrase in quotes: <code>"due upon receipt"</code></td>
+</tr>
+<tr>
+<td>The total on a statement</td>
+<td><code>$</code> followed by digits, like <code>$1,2</code> (commas matter in many PDFs)</td>
+</tr>
+<tr>
+<td>Where the page numbers are</td>
+<td>search for <code>Page 12</code></td>
+</tr>
+<tr>
+<td>Everything in a folder about <code>survey</code></td>
+<td>use the folder-level search and type <code>survey</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-some-pdf-searches-come-up-empty">Why some PDF searches come up empty</h2>
+<p>A scanned PDF is a photo. Search finds <em>text</em>, and a photo has none — unless the scan had its "text recognition" (OCR) step applied. Most phone scanning tools do this automatically (see <a href="scanning.html">Scanning</a>). If yours doesn't:</p>
+<ul>
+<li>Re-scan with the built-in Document/Scan mode — text usually gets recognized in the process.</li>
+<li>Or run the file through a free OCR tool later. One time, permanent benefit.</li>
+</ul>
+<p>Test it: open any scanned PDF and Ctrl+F for a word you know is in it. If you find it, OCR worked and that file is now <em>permanently</em> searchable. That's the whole benefit of this handbook, right there.</p>
+<h2 id="the-search-first-filing-habit">The search-first filing habit</h2>
+<p>Combine <a href="folders-naming.html">Folders and Naming</a> with search and a rule emerges:</p>
+<blockquote><p><strong>You don't file so you can browse. You file so that searching works.</strong></p></blockquote>
+<p>A file named <code>2025-11-Electric-Bill-Nov-Paid.pdf</code> in <code>05-Money</code> is findable ten ways: by typing <code>2025-11 elect</code>, <code>electric bill</code>, <code>bill nov</code>, browsing <code>05-Money</code>, or Ctrl+F inside the file for the dollar amount. Overfiling (deep nested folders, five kinds of metadata) adds minutes and saves nothing.</p>
+<h2 id="speed-tricks-if-you-like-this-stuff">Speed tricks, if you like this stuff</h2>
+<ul>
+<li>In Windows Explorer or Mac Finder, click into a folder and <em>type the first letters</em> of the file's name — the file gets selected. <code>2 0 2 5 e l e</code> is faster than any scroll.</li>
+<li><code>Ctrl+F</code> also works in spreadsheets and word docs — and it's the same muscle memory everywhere, which is the point.</li>
+<li>Pin your <code>Papers/</code> folder to your file browser's sidebar so reaching it is one click.</li>
+</ul>
+<p>That's genuinely all of it. When there are too many files for even search to be instant (a few thousand), that's when the optional <a href="ai-filing.html">AI-assisted filing</a> chapter earns its keep.</p>
+<p><a href="index.html">Back to the handbook index</a></p>
+</main>
+</div>
+<footer class="site"><div class="container"><p>Asdale Dynamics, LLC · An MIT-licensed handbook from <a href="https://dylanasdale.github.io/">dylanasdale.github.io</a> · Education only — not legal, tax, or financial advice.</p></div></footer>
+</body>
+</html>

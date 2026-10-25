@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Assisted Filing (Optional) — The Digital Papers Handbook</title>
+<style>:root{--ink:#1f2430;--paper:#fbf8f3;--accent:#2a6f61;--accent-soft:#e3efec;--muted:#6b7280;--line:#e5e1d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper)}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 20px;display:flex;gap:36px;align-items:flex-start}
+header.site{background:var(--accent);color:#fff;padding:14px 0}
+header.site .container{display:block}
+header.site strong{font-size:18px}
+header.site span{font-size:13px;opacity:.85;display:block}
+nav.sidebar{position:sticky;top:20px;width:210px;flex:0 0 210px;padding:18px 0;font-size:14px}
+nav.sidebar a{display:block;padding:4px 10px;border:0;border-left:2px solid var(--line);color:var(--ink)}
+nav.sidebar a:hover{background:var(--accent-soft)}
+nav.sidebar a.current{border-left-color:var(--accent);font-weight:bold;color:var(--accent)}
+main{flex:1;min-width:0;padding:28px 0 40px}
+h1,h2,h3{line-height:1.25;font-family:'Segoe UI',system-ui,sans-serif}
+h1{font-size:30px;margin:0 0 6px}
+p.jumpline{color:var(--muted);font-style:italic;margin-top:0}
+h2{font-size:22px;margin-top:34px;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin-top:24px}
+pre{background:#2b2b33;color:#f4f4f4;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.45}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+pre code{background:transparent;padding:0;color:inherit}
+blockquote{margin:18px 0;padding:10px 18px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:18px 0 30px}
+footer.site .container{display:block}
+@media(max-width:760px){.container{display:block}nav.sidebar{width:auto;position:static;padding-bottom:0}main{padding-top:10px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="container"><strong>The Digital Papers Handbook</strong><span>Taming paper and digital documents — one hour a year.</span></div></header>
+<div class="container">
+<nav class="sidebar"><a href="index.html">Home</a>
+<a href="keep-or-toss.html">Keep or Toss</a>
+<a href="retention.html">Retention Table</a>
+<a href="scanning.html">Scan With Your Phone</a>
+<a href="folders-naming.html">Folders and Naming</a>
+<a href="find-anything.html">Find Anything</a>
+<a href="ai-filing.html" class="current">AI Filing (optional)</a>
+<a href="shredding.html">Shredding Rules</a>
+<a href="yearly-cleanup.html">Yearly Cleanup</a>
+<a href="glossary.html">Glossary</a></nav>
+<main><p><em>A local command-line tool can suggest where each new file belongs, based on your own folder system. This is genuinely optional — the manual system works forever — but if you enjoy having a helper, here's the friendly version.</em></p>
+<hr>
+<h2 id="what-this-chapter-is">What this chapter is</h2>
+<p>This chapter shows how to use an AI filing helper that runs <strong>on your own computer</strong> to:</p>
+<ol>
+<li>Look at a new file's name (and, in some cases, its content),</li>
+<li>Suggest which of your existing folders it belongs in,</li>
+<li>Move it there when you say yes.</li>
+</ol>
+<p>It's the "auto-pilot" version of <a href="folders-naming.html">Folders and Naming</a> — the folders and the naming rule stay exactly the same; the helper just does the two seconds of thinking for you.</p>
+<h2 id="what-to-look-for-in-a-filing-helper">What to look for in a filing helper</h2>
+<p>Whatever tool you pick (including the <code>local-file-organizer-cli</code> mentioned below), check for the same three things this handbook requires of every tool:</p>
+<ul>
+<li><strong>Runs locally.</strong> Your file names and documents stay on your machine. The helper should work offline or send nothing Telemetry-able. If a tool requires uploading your papers to someone's server, skip it.</li>
+<li><strong>Suggests, then asks.</strong> You want a tool that proposes a destination and waits for a yes — not one that shuffles files silently.</li>
+<li><strong>Knows your folders.</strong> If it can't see (or be taught) your <code>Papers/</code> tree, it can't file into your system.</li>
+</ul>
+<h2 id="meet-local-file-organizer-cli">Meet <code>local-file-organizer-cli</code></h2>
+<p><code>local-file-organizer-cli</code> is a small open-source command-line tool that watches a folder (or processes files you pass to it), uses a local model (like Ollama) to guess what each file is, proposes a destination folder, and moves it on your confirmation. Nothing leaves your computer: the model runs on your own hardware.</p>
+<h3 id="setup-one-evening-once">Setup (one evening, once)</h3>
+<ol>
+<li><strong>Install Ollama</strong> (the local model runner) from <code>ollama.com</code> for your platform. Test with <code>ollama pull llama3.2</code> — a small model is plenty for filing.</li>
+<li><strong>Install the tool</strong> — with Python installed, it's typically:</li>
+</ol>
+<pre><code>   pip install local-file-organizer-cli</code></pre>
+<p>(Check the project's own README for the current install line — this handbook deliberately doesn't reproduce version numbers that drift.)</p>
+<ol>
+<li><strong>Point it at your folder system.</strong> Most organizer tools of this kind want two things: a source folder (where unsorted files land, e.g. <code>Downloads/Paper-Inbox/</code>) and a destination tree (your <code>Documents/Papers/</code> folders from <a href="folders-naming.html">Folders and Naming</a>).</li>
+</ol>
+<h3 id="the-daily-flow-version">The daily-flow version</h3>
+<ul>
+<li>Unsorted files drop into your <strong>paper inbox</strong> folder (just a folder — call it <code>Paper-Inbox</code>).</li>
+<li>Once a day (or whenever you feel like it — low-energy friendly), run the organizer on that folder.</li>
+<li>It lists each file with a proposed destination: <em>"2026-05-Laptop-Receipt.pdf → 07-Purchases — confirm?"</em> You press Y/N.</li>
+<li>Approvals get moved; your inbox stays clear.</li>
+</ul>
+<h3 id="if-ai-filing-sounds-like-too-much">If AI filing sounds like too much</h3>
+<p>That's a legitimate answer, not a failure. The manual system on <a href="folders-naming.html">Folders and Naming</a> is complete without it, and the <a href="yearly-cleanup.html">yearly cleanup</a> covers the slippage. Tools like this shine after your folder system has existed for a few months, when there's a clear pattern for them to learn or follow. Add it then, if ever.</p>
+<h2 id="a-gentle-note-on-ai-and-your-documents">A gentle note on AI and your documents</h2>
+<p>Keep sensitive originals sensible: don't point a filing helper at a folder of anything you wouldn't paste into a chat window — local-first tools keep things on your machine, but you're the one who decides what they get to read. That judgment is the same one from <a href="keep-or-toss.html">Keep or Toss</a>, applied to software.</p>
+<p>And one caution for any filing tool (AI or otherwise): <strong>back up before big moves.</strong> A tool that moves hundreds of files with a single command deserves a folder that's synced or copied somewhere first. <a href="shredding.html">Shredding Rules</a> apply to digital files too — an accidental destruction is still a destruction.</p>
+<p><a href="index.html">Back to the handbook index</a></p>
+</main>
+</div>
+<footer class="site"><div class="container"><p>Asdale Dynamics, LLC · An MIT-licensed handbook from <a href="https://dylanasdale.github.io/">dylanasdale.github.io</a> · Education only — not legal, tax, or financial advice.</p></div></footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Long to Keep Things: The Retention Table — The Digital Papers Handbook</title>
+<style>:root{--ink:#1f2430;--paper:#fbf8f3;--accent:#2a6f61;--accent-soft:#e3efec;--muted:#6b7280;--line:#e5e1d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper)}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 20px;display:flex;gap:36px;align-items:flex-start}
+header.site{background:var(--accent);color:#fff;padding:14px 0}
+header.site .container{display:block}
+header.site strong{font-size:18px}
+header.site span{font-size:13px;opacity:.85;display:block}
+nav.sidebar{position:sticky;top:20px;width:210px;flex:0 0 210px;padding:18px 0;font-size:14px}
+nav.sidebar a{display:block;padding:4px 10px;border:0;border-left:2px solid var(--line);color:var(--ink)}
+nav.sidebar a:hover{background:var(--accent-soft)}
+nav.sidebar a.current{border-left-color:var(--accent);font-weight:bold;color:var(--accent)}
+main{flex:1;min-width:0;padding:28px 0 40px}
+h1,h2,h3{line-height:1.25;font-family:'Segoe UI',system-ui,sans-serif}
+h1{font-size:30px;margin:0 0 6px}
+p.jumpline{color:var(--muted);font-style:italic;margin-top:0}
+h2{font-size:22px;margin-top:34px;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin-top:24px}
+pre{background:#2b2b33;color:#f4f4f4;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.45}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+pre code{background:transparent;padding:0;color:inherit}
+blockquote{margin:18px 0;padding:10px 18px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:18px 0 30px}
+footer.site .container{display:block}
+@media(max-width:760px){.container{display:block}nav.sidebar{width:auto;position:static;padding-bottom:0}main{padding-top:10px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="container"><strong>The Digital Papers Handbook</strong><span>Taming paper and digital documents — one hour a year.</span></div></header>
+<div class="container">
+<nav class="sidebar"><a href="index.html">Home</a>
+<a href="keep-or-toss.html">Keep or Toss</a>
+<a href="retention.html" class="current">Retention Table</a>
+<a href="scanning.html">Scan With Your Phone</a>
+<a href="folders-naming.html">Folders and Naming</a>
+<a href="find-anything.html">Find Anything</a>
+<a href="ai-filing.html">AI Filing (optional)</a>
+<a href="shredding.html">Shredding Rules</a>
+<a href="yearly-cleanup.html">Yearly Cleanup</a>
+<a href="glossary.html">Glossary</a></nav>
+<main><p><em>The single most-asked question in paper-taming. Here are the answers, with the reasoning kept to one line each.</em></p>
+<hr>
+<h2 id="the-core-table">The core table</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Keep for</th>
+<th>Why (one line)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tax returns (the return itself)</td>
+<td>7 years minimum</td>
+<td>IRS generally has 3 years to audit, 6 for substantial underreporting; 7 is a comfortable cushion</td>
+</tr>
+<tr>
+<td>Tax support documents (W-2s, 1099s, receipts for deductions)</td>
+<td>7 years, with the return they belong to</td>
+<td>They prove the return's numbers</td>
+</tr>
+<tr>
+<td>Property tax records / improvement receipts</td>
+<td>Whole time you own the property + 7 years</td>
+<td>Improvements adjust your cost basis when you sell</td>
+</tr>
+<tr>
+<td>Insurance policies</td>
+<td>Until renewed or replaced + 1 year</td>
+<td>Proof of coverage if a claim question comes up later</td>
+</tr>
+<tr>
+<td>Insurance claim paperwork</td>
+<td>Until the claim fully closes + 1 year</td>
+<td>Claims can be reopened</td>
+</tr>
+<tr>
+<td>Health insurance statements (EOBs)</td>
+<td>Until you've checked them, then toss or shred</td>
+<td>Your provider keeps the details; keep only disputed ones</td>
+</tr>
+<tr>
+<td>Medical bills and receipts</td>
+<td>1–3 years, longer if tax-deductible or in dispute</td>
+<td>Matches tax rules and dispute windows</td>
+</tr>
+<tr>
+<td>Bank statements</td>
+<td>1 year (7 if they support taxes)</td>
+<td>Banks keep records; your tax rules are stricter</td>
+</tr>
+<tr>
+<td>Credit card statements</td>
+<td>1 year (7 if they support taxes)</td>
+<td>Same logic as bank statements</td>
+</tr>
+<tr>
+<td>Pay stubs</td>
+<td>Until they match your W-2 or year-end statement</td>
+<td>Then the W-2 is the record</td>
+</tr>
+<tr>
+<td>Utility bills</td>
+<td>Until payment clears; 1 year if needed for home office or rental claims</td>
+<td>Rarely needed beyond that</td>
+</tr>
+<tr>
+<td>Rent lease + move-in inspection</td>
+<td>Duration of tenancy + a few years (varies)</td>
+<td>Deposit disputes can surface later; check your local rules</td>
+</tr>
+<tr>
+<td>Mortgage statements</td>
+<td>Life of the loan + 3 years</td>
+<td>Loan payoff disputes happen</td>
+</tr>
+<tr>
+<td>Loan payoff letters ("satisfaction" letters)</td>
+<td>Forever</td>
+<td>Proof the debt is gone</td>
+</tr>
+<tr>
+<td>Vehicle title and bill of sale</td>
+<td>While you own the car + a few years</td>
+<td>Needed to sell; proof of ownership history</td>
+</tr>
+<tr>
+<td>Vehicle maintenance records</td>
+<td>While you own the car</td>
+<td>Boosts resale price</td>
+</tr>
+<tr>
+<td>Warranties and big purchase receipts</td>
+<td>Life of the product</td>
+<td>That's what a warranty is</td>
+</tr>
+<tr>
+<td>Household inventory / photos for insurance</td>
+<td>Contents swap, keep current version</td>
+<td>Makes claims painless</td>
+</tr>
+<tr>
+<td>IDs, passports, birth/death/marriage certificates</td>
+<td>Forever (paper original)</td>
+<td>Replacing them is misery</td>
+</tr>
+<tr>
+<td>Estate documents (wills, trusts, POA — current versions)</td>
+<td>Forever (current); shred superseded drafts</td>
+<td>Obviates "which one is real?" disasters</td>
+</tr>
+<tr>
+<td>Receipts for everyday purchases</td>
+<td>Until the return window closes</td>
+<td>Then the card statement has it</td>
+</tr>
+<tr>
+<td>Retirement account statements</td>
+<td>Year-end statements; 7 years for tax-linked ones</td>
+<td>Custodians keep the rest</td>
+</tr>
+<tr>
+<td>Old photos and sentimental paper</td>
+<td>Your call — no guilt rule applies</td>
+<td>Photograph what matters, keep a few originals</td>
+</tr>
+<tr>
+<td>Instruction manuals</td>
+<td>Life of the appliance (or find PDFs online)</td>
+<td>Free up a whole drawer</td>
+</tr>
+<tr>
+<td>School records, diplomas, transcripts</td>
+<td>Forever</td>
+<td>Verification comes up surprisingly often</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-questions-answered-plainly">Common questions, answered plainly</h2>
+<p><strong>"Why 7 years for taxes if the IRS says 3?"</strong> Rules change, states differ, and "substantial understatement" extends the window to 6. Seven years absorbs all of those with room to spare. Storage is free once it's a PDF.</p>
+<p><strong>"Can I get rid of paper tax returns after scanning?"</strong> Mostly yes — the IRS accepts digital records. Exception worth honoring: anyone whose situation involves estate property, amended filings, or unusual forms may want the paper return kept indefinitely. When unsure, keeping is cheap.</p>
+<p><strong>"What about 'keep forever' items that already got scanned?"</strong> The scan is for convenience; the paper original of certificates, deeds, and titles is the legally convenient one. Keep both.</p>
+<p><strong>"A drawer I forgot about is full of 2009 bank statements."</strong> If they don't support a tax year you're still keeping: <a href="shredding.html">shredding rules</a> apply. This page plus ten minutes is the fix.</p>
+<h2 id="a-one-line-sticky-note-version">A one-line sticky note version</h2>
+<blockquote><p><strong>Taxes 7 · Insurance until replaced · Certificates forever · Bills until paid · If in doubt, scan it and keep the PDF.</strong></p></blockquote>
+<p>Next: turn paper into those PDFs with just your phone — <a href="scanning.html">Scanning</a>.</p>
+<p><a href="index.html">Back to the handbook index</a></p>
+</main>
+</div>
+<footer class="site"><div class="container"><p>Asdale Dynamics, LLC · An MIT-licensed handbook from <a href="https://dylanasdale.github.io/">dylanasdale.github.io</a> · Education only — not legal, tax, or financial advice.</p></div></footer>
+</body>
+</html>

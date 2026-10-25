@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keep or Toss: The Decision Tree — The Digital Papers Handbook</title>
+<style>:root{--ink:#1f2430;--paper:#fbf8f3;--accent:#2a6f61;--accent-soft:#e3efec;--muted:#6b7280;--line:#e5e1d8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper)}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft)}
+a:hover{border-bottom-color:var(--accent)}
+.container{max-width:960px;margin:0 auto;padding:0 20px;display:flex;gap:36px;align-items:flex-start}
+header.site{background:var(--accent);color:#fff;padding:14px 0}
+header.site .container{display:block}
+header.site strong{font-size:18px}
+header.site span{font-size:13px;opacity:.85;display:block}
+nav.sidebar{position:sticky;top:20px;width:210px;flex:0 0 210px;padding:18px 0;font-size:14px}
+nav.sidebar a{display:block;padding:4px 10px;border:0;border-left:2px solid var(--line);color:var(--ink)}
+nav.sidebar a:hover{background:var(--accent-soft)}
+nav.sidebar a.current{border-left-color:var(--accent);font-weight:bold;color:var(--accent)}
+main{flex:1;min-width:0;padding:28px 0 40px}
+h1,h2,h3{line-height:1.25;font-family:'Segoe UI',system-ui,sans-serif}
+h1{font-size:30px;margin:0 0 6px}
+p.jumpline{color:var(--muted);font-style:italic;margin-top:0}
+h2{font-size:22px;margin-top:34px;border-bottom:1px solid var(--line);padding-bottom:4px}
+h3{font-size:18px;margin-top:24px}
+pre{background:#2b2b33;color:#f4f4f4;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.45}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+pre code{background:transparent;padding:0;color:inherit}
+blockquote{margin:18px 0;padding:10px 18px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+blockquote p{margin:0}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px}
+th,td{text-align:left;padding:8px 10px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--accent-soft);font-family:'Segoe UI',system-ui,sans-serif;font-size:14px}
+tr:nth-child(even) td{background:rgba(0,0,0,.015)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:18px 0 30px}
+footer.site .container{display:block}
+@media(max-width:760px){.container{display:block}nav.sidebar{width:auto;position:static;padding-bottom:0}main{padding-top:10px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="container"><strong>The Digital Papers Handbook</strong><span>Taming paper and digital documents — one hour a year.</span></div></header>
+<div class="container">
+<nav class="sidebar"><a href="index.html">Home</a>
+<a href="keep-or-toss.html" class="current">Keep or Toss</a>
+<a href="retention.html">Retention Table</a>
+<a href="scanning.html">Scan With Your Phone</a>
+<a href="folders-naming.html">Folders and Naming</a>
+<a href="find-anything.html">Find Anything</a>
+<a href="ai-filing.html">AI Filing (optional)</a>
+<a href="shredding.html">Shredding Rules</a>
+<a href="yearly-cleanup.html">Yearly Cleanup</a>
+<a href="glossary.html">Glossary</a></nav>
+<main><p><em>Every piece of paper gets the same four questions, in order. This page walks through them.</em></p>
+<hr>
+<h2 id="the-tree">The tree</h2>
+<p>Start with any document in your hand and follow the questions top to bottom:</p>
+<pre><code>START: You are holding a piece of paper.
+│
+├─ Q1: Would it cost me real money or real trouble
+│      if I threw this away and needed it later?
+│      │
+│      ├─ YES ────────────────────────────────────┐
+│      │                                          ▼
+│      │                              Q2: Does anyone but me ever
+│      │                              need the ORIGINALS of this?
+│      │                              (wet-ink signatures, passports,
+│      │                               birth/death certificates, deeds,
+│      │                               some government forms)
+│      │                                 │
+│      ├─ NO ──┐                          ├─ YES → KEEP the paper in one
+│      │      │                          │         file box. Scan it too.
+│      │      │                          └─ NO  → SCAN it, keep the file,
+│      │      │                                   RECYCLE the paper.
+│      │      ▼
+│      │  Q3: Is it 2+ years old and just a record of
+│      │  a moment that has passed?
+│      │  (old utility bill, expired coupon, receipt
+│      │   for something unpurchasable now)
+│      │    │
+│      │    ├─ NO  → It probably belongs in one of the
+│      │    │        digital folders. Scan or file it.
+│      │    └─ YES → RECYCLE it. (Shred if it has your
+│      │              account numbers or SSN on it.)
+│      │
+└─ Q4: Is it sentimental? (kids' drawings, cards, photos)
+       │
+       └─ Yes → RULE: keep it only if it still makes you
+                feel something. A photo of the drawing counts.
+                A box of every drawing does not. No absence of
+                guilt in this handbook.</code></pre>
+<p>(Yes, Q4 lives slightly outside the main flow. Sentimental clutter refuses to follow anyone's tree. That's normal.)</p>
+<h2 id="the-three-homes-a-document-can-live-in">The three homes a document can live in</h2>
+<p><strong>1. In a drawer (paper originals you must keep).</strong> Trust documents, property records, government certificates, passports, social security cards. One box, one label. That's your whole "must be paper" filing system.</p>
+<p><strong>2. In your digital folders (everything else worth keeping).</strong> Statements, bills, insurance policies, tax records, warranties, manuals, receipts. Scanned or saved as PDF.</p>
+<p><strong>3. In the shredder or recycling (everything else).</strong> Most paper belongs here eventually. The <a href="retention.html">retention table</a> tells you when.</p>
+<h2 id="keep-digital-keep-paper-at-a-glance">Keep digital, keep paper — at a glance</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Keep digital?</th>
+<th>Keep paper?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly utility bill</td>
+<td>Yes, until the next one arrives and the payment cleared</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Tax return + support</td>
+<td>Yes, at least 7 years</td>
+<td>Optional (digital copies are widely accepted)</td>
+</tr>
+<tr>
+<td>Insurance policies</td>
+<td>Yes</td>
+<td>Yes, until renewed/replaced</td>
+</tr>
+<tr>
+<td>Mortgage or deed</td>
+<td>Yes</td>
+<td>Yes (originals matter)</td>
+</tr>
+<tr>
+<td>Car title</td>
+<td>Yes</td>
+<td>Yes (originals required to sell)</td>
+</tr>
+<tr>
+<td>Passport / birth certificate</td>
+<td>Scan for reference only</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Warranties and receipts</td>
+<td>Yes, in the purchase's folder</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Owners' manuals</td>
+<td>Usually available online — keep the PDF</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Kids' art and schoolwork</td>
+<td>Photograph the best pieces</td>
+<td>Handful, rotated yearly</td>
+</tr>
+<tr>
+<td>Greeting cards</td>
+<td>No</td>
+<td>Only ones that still mean something</td>
+</tr>
+<tr>
+<td>"Records of you paying online"</td>
+<td>The website already has them</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Anything with an account number you'll cancel anyway</td>
+<td>No</td>
+<td>No — shred or recycle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-two-line-summary">The two-line summary</h2>
+<ul>
+<li><strong>Trouble if lost, and originals matter?</strong> → Keep the paper (and scan a backup).</li>
+<li><strong>Trouble if lost, originals don't matter?</strong> → Scan it, keep the file, recycle the paper.</li>
+<li><strong>No trouble if lost?</strong> → Recycle (shred first if it has account numbers or an SSN).</li>
+</ul>
+<p>Next: the <a href="retention.html">retention table</a> answers the follow-up question — "<em>how long</em> do I have to keep the ones I'm keeping?"</p>
+<p><a href="index.html">Back to the handbook index</a></p>
+</main>
+</div>
+<footer class="site"><div class="container"><p>Asdale Dynamics, LLC · An MIT-licensed handbook from <a href="https://dylanasdale.github.io/">dylanasdale.github.io</a> · Education only — not legal, tax, or financial advice.</p></div></footer>
+</body>
+</html>
